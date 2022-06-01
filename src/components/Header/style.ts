@@ -8,6 +8,7 @@ export const HeaderContainer = styled.header`
     background-color: white;
     height: 62px;
     padding: 0 38px;
+    border-bottom: 1px solid #EAEFED;
 `
 export const UserContainer = styled.div`
     display: flex;
