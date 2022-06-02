@@ -7,7 +7,7 @@ import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 const RoleOptionsModal = ({ID}: {ID: any}) => {
   const router = useRouter()
   const handleNavigate = () => {
-
+    router.push(`role/${ID}`)
   }
   return (
     <ModalContent>

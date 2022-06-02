@@ -10,7 +10,7 @@ const RolesDataTable = () => {
   return (
     <>
         {rolesData?.map((item: Role, index: number) => (
-            <RoleTableRow item={item} key={index} />
+            <RoleTableRow item={item} index={index+1} key={index} />
         ))}
     </>
   )

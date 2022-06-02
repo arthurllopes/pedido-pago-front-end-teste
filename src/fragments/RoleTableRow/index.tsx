@@ -1,20 +1,17 @@
 import styled from '@emotion/styled'
 import React from 'react'
 import { Role } from '../../context/NavigationContext'
-import MoreVertIcon from '@mui/icons-material/MoreVert';
-import RoleOptionsModal from '../RoleOptionsModal';
 import ActionButton from '../ActionButton';
 
 
-const RoleTableRow = ({item}: {item: Role}) => {
-
+const RoleTableRow = ({item, index}: {item: Role, index: number}) => {
   return (
     <>
         <RoleTableRowContainer>
             <th>{item.name}</th>
             <th>{item.departament}</th>
             <th>{item.agents_quantity}</th>
-            <ActionButton ID={item.name} />
+            <ActionButton ID={index} />
         </RoleTableRowContainer>
     </>
   )     
