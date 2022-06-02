@@ -63,7 +63,8 @@ const TableContainer = styled.div`
   padding: 24px;
   margin-top: 24px;
 
-  width: 70vw;
+  width: 60vw;
+  min-width: fit-content;
 `
 
 export default Home

@@ -11,7 +11,7 @@ const TabNav = () => {
     const tabsJSX = tabs.map(({name, id}: {id: string, name: string}) => (
       <Tab key={id} onClick={() => setTab(id)} label={name} id={id} value={id} 
       sx={{
-        width: 280,
+        width: 240,
         fontWeight: '600',
         fontSize: '14px',
         fontFamily: 'Poppins',
