@@ -7,8 +7,8 @@ Obrigado pelo convite, espero que gostem!
  - [React](https://pt-br.reactjs.org/)
  - [Typescript](https://www.typescriptlang.org/)
  - [Axios](https://axios-http.com/docs/intro)
- - [Nextjs]([https://fontawesome.com/](https://nextjs.org/)
- - [Emotion]([https://styled-components.com/](https://emotion.sh/docs/introduction)
+ - [Nextjs](https://nextjs.org/)
+ - [Emotion](https://emotion.sh/docs/introduction)
 
 # Instalação e uso
 
