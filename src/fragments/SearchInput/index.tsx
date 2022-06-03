@@ -32,7 +32,7 @@ const SearchInput = ({placeholder}: {placeholder: string}) => {
 
           InputLabelProps={{
             style: { fontFamily: 'Poppins', fontWeight: '500', fontSize: '1rem', color: '#A3B8B0'}
-         }}
+          }}
         />
       </FormControl>
 

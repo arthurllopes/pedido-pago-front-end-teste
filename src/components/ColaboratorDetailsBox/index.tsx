@@ -5,8 +5,7 @@ import { AgentInitialInfo, BoxContainer, DataContent, InfoCard } from './style'
 import AddIcCallIcon from '@mui/icons-material/AddIcCall';
 import DateRangeIcon from '@mui/icons-material/DateRange';
 import AssignmentIndIcon from '@mui/icons-material/AssignmentInd';
-import { InputAdornment, MenuItem, TextField } from '@mui/material';
-import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import { TextField } from '@mui/material';
 
 const ColaboratorDetailsBox = ({agent}: {agent: Agent}) => {
   const renderCards = () => {
@@ -30,17 +29,23 @@ const ColaboratorDetailsBox = ({agent}: {agent: Agent}) => {
     return cardsJSX
   } 
   const renderDataItem = () => {
-    const items = [1, 2,3,4]
+    const items = [{type: 'Departamento', content: agent.department}, {type: 'Cargo', content: agent.role}, {type: 'Unidade', content: agent.branch}, {type: 'Status', content: agent.status === 'active' ? 'Ativo' : 'Inativo'}]
     const dataJSX = items.map((item, index)=> (
-      <TextField key={index} id="outlined-select-disabled" placeholder='Banheiro' label="Departamento" defaultValue="Limpeza" fullWidth select InputProps={{readOnly: true, startAdornment: (
-        <InputAdornment position="start">
-          Comercial
-        </InputAdornment>
-      )}} />
+      <TextField key={index} id="outlined-select-disabled" label={item.type} value={`${item.content}`} fullWidth select InputProps={{readOnly: true, style: {
+        padding: '0 20px',
+        color: '#587169',
+        fontWeight: '500',
+        fontFamily: 'Poppins',
+        fontSize: '1rem',
+      }}}
+      InputLabelProps={{
+        style: { fontFamily: 'Poppins', fontWeight: '500', fontSize: '14px', color: '#A3B8B0'}
+      }}>
+        <option value={`${item.content}`}>{item.content}</option>
+      </TextField>
     ))
     return dataJSX
   } 
-  
     
   
   return (

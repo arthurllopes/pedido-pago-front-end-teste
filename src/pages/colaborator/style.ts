@@ -19,6 +19,13 @@ export const MainContainer = styled.main`
     justify-content: center;
     font-weight: 600;
     font-size: 2rem;
+
+    @media (max-width: 800px) {
+      font-size: 1.8rem;
+    }
+    @media (max-width: 800px) {
+      font-size: 1.4rem;
+    } 
   }
   .back-btn {
     width: 36px;
