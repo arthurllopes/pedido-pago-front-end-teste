@@ -4,21 +4,13 @@ import {ItemsTableContainer} from './style'
 import { useNavigation } from '../../context/NavigationContext';
 import RolesDataTable from '../RolesDataTable';
 import ColaboratorDataTable from '../ColaboratorDataTable';
-import {LoadingButton} from '@mui/lab'
 
 
 const ItemsTable = () => {
-  const {tab, loading, erro, heading} = useNavigation()
+  const {tab, heading} = useNavigation()
 
-  if (loading) return (
-    <>
-      <LoadingButton loading={loading}>
-      </LoadingButton>
-    </>
-  )
   return (
     <>
-      <h4 className='list-title'>Listagem de {tab === 'colaborators' ? 'Colaboradores' : 'Cargos'}</h4>
       <ItemsTableContainer>
         <thead>
           <tr className="heading">
@@ -29,17 +21,13 @@ const ItemsTable = () => {
           </tr>
         </thead>
         <tbody>
-          {erro ? (
-            <>
-              <p>{erro}</p>
-            </>
-          ) : (
-            tab === 'colaborators' ? (
+          {tab === 'colaborators' ? 
+            (
               <ColaboratorDataTable />
             ) : (
               <RolesDataTable />
             )
-          )}
+          }
         </tbody>
       </ItemsTableContainer>
 

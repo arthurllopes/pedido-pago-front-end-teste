@@ -1,9 +1,7 @@
 import styled from '@emotion/styled'
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import ItemsTable from '../components/ItemsTable'
 import Header from '../components/Header'
-import TabNav from '../components/TabNav'
 import { useNavigation } from '../context/NavigationContext'
 import SearchInput from '../fragments/SearchInput'
 import Sidebar from '../components/Sidebar'
@@ -12,6 +10,10 @@ import dynamic from 'next/dynamic'
 
 const TabNavtWithNoSSR = dynamic(
   () => import('../components/TabNav'),
+  { ssr: false }
+)
+const DataContentWithNoSSR = dynamic(
+  () => import('../components/DataContent'),
   { ssr: false }
 )
 const Home: NextPage = () => {
@@ -28,11 +30,12 @@ const Home: NextPage = () => {
         <Sidebar />
         <div className="main">
           <h3 className="title">Organização</h3>
-          <TableContainer>
+          <MainContent>
             <TabNavtWithNoSSR />
             <SearchInput placeholder={tab === 'colaborators' ? 'Pesquise por nome ou cpf' : 'Pesquise por cargos'} />
-            <ItemsTable />
-          </TableContainer>
+            <h4 className='list-title'>Listagem de {tab === 'colaborators' ? 'Colaboradores' : 'Cargos'}</h4>
+            <DataContentWithNoSSR />
+          </MainContent>
         </div>
       </MainContainer>
     </div>
@@ -59,7 +62,7 @@ const MainContainer = styled.main`
     display: block;
   }
 `
-const TableContainer = styled.div`
+const MainContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;

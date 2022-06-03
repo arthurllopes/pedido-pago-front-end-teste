@@ -39,7 +39,7 @@ const ColaboratorTableRowContainer = styled.tr`
     
     &.inactive {
       th {
-        filter: opacity(.6)
+        filter: opacity(.6);
       }
       .more-btn {
         filter: opacity(1) !important;

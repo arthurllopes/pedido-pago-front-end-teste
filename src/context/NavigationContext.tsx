@@ -39,7 +39,6 @@ export const NavigationContextProvider = ({children}: NavigationContextProviderP
 
     const colaboratorHeadingList = ['Nome Completo', 'Departamento', 'Cargo', 'Unidade', 'Status']
     const rolesHeadingList = ['Cargo', 'Departamento', 'Colaboradores']
-
     const heading = tab === 'colaborators' ? colaboratorHeadingList : rolesHeadingList
 
     async function getItems (route: string, select: string) {

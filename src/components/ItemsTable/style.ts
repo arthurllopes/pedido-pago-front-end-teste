@@ -9,10 +9,10 @@ export const ItemsTableContainer = styled.table`
     text-align: left;
     
     .heading {            
-            color: #587169;
-            border: 1px solid #EAEFED;
+        color: #587169;
+        border: 1px solid #EAEFED;
     }
     th {
-            padding: 20px;
+        padding: 20px;
     }
 `
