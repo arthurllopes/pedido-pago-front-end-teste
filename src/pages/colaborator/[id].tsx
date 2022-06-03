@@ -7,6 +7,7 @@ import api from '../../services/api'
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ColaboratorDetailsBox from '../../components/ColaboratorDetailsBox'
 import Link from 'next/link'
+import styled from '@emotion/styled'
 
 export type Agent = {
   id: number,
