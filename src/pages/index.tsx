@@ -8,7 +8,12 @@ import { useNavigation } from '../context/NavigationContext'
 import SearchInput from '../fragments/SearchInput'
 import Sidebar from '../components/Sidebar'
 import React from 'react'
+import dynamic from 'next/dynamic'
 
+const TabNavtWithNoSSR = dynamic(
+  () => import('../components/TabNav'),
+  { ssr: false }
+)
 const Home: NextPage = () => {
   const {tab} = useNavigation()
   
@@ -24,7 +29,7 @@ const Home: NextPage = () => {
         <div className="main">
           <h3 className="title">Organização</h3>
           <TableContainer>
-            <TabNav />
+            <TabNavtWithNoSSR />
             <SearchInput placeholder={tab === 'colaborators' ? 'Pesquise por nome ou cpf' : 'Pesquise por cargos'} />
             <ItemsTable />
           </TableContainer>

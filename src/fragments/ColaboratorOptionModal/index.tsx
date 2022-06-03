@@ -1,10 +1,8 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import styled from '@emotion/styled';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import { useRouter } from 'next/router';
-import { useOutsideClick } from '../../hook/useOutsideClick';
-import OptionsModal from '../OptionsModal';
 
 const ColaboratorOptionsModal = ({ID}: {ID: number | string}) => {
     const router = useRouter()

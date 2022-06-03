@@ -1,10 +1,9 @@
 import styled from '@emotion/styled'
 import Image from 'next/image'
-import React, { MouseEvent } from 'react'
+import React from 'react'
 import { Colaborator } from '../../context/NavigationContext'
 import ColaboratorOptionsModal from '../ColaboratorOptionModal'
 import StatusTag from '../StatusTag'
-import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ActionButton from '../ActionButton'
 
 
@@ -25,7 +24,11 @@ const ColaboratorTableRow = ({item}: {item: Colaborator}) => {
         <th>
           <StatusTag status={item.status} />
         </th>
-        <ActionButton ID={item.agent_id} />
+        <th>
+          <ActionButton>
+            <ColaboratorOptionsModal ID={item.agent_id} />
+          </ActionButton>
+        </th>
       </ColaboratorTableRowContainer>
     </>
   )

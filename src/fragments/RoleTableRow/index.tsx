@@ -2,6 +2,7 @@ import styled from '@emotion/styled'
 import React from 'react'
 import { Role } from '../../context/NavigationContext'
 import ActionButton from '../ActionButton';
+import RoleOptionsModal from '../RoleOptionsModal';
 
 
 const RoleTableRow = ({item, index}: {item: Role, index: number}) => {
@@ -11,7 +12,11 @@ const RoleTableRow = ({item, index}: {item: Role, index: number}) => {
             <th>{item.name}</th>
             <th>{item.departament}</th>
             <th>{item.agents_quantity}</th>
-            <ActionButton ID={index} />
+            <th>
+              <ActionButton>
+                <RoleOptionsModal ID={index}/>
+              </ActionButton>
+            </th>
         </RoleTableRowContainer>
     </>
   )     

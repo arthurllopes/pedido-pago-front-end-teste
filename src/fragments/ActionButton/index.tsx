@@ -7,8 +7,7 @@ import { useNavigation } from '../../context/NavigationContext';
 import RoleOptionsModal from '../RoleOptionsModal';
 
 
-const ActionButton = ({ID}: {ID: number | string}) => {
-    const {tab} = useNavigation()
+const ActionButton = ({children}: {children: JSX.Element}) => {
     const [modal, setModal] = React.useState(false)
 
   return (
@@ -16,17 +15,13 @@ const ActionButton = ({ID}: {ID: number | string}) => {
         <MoreVertIcon />
 
         {modal && <OptionsModal setModal={setModal} >
-            {tab === 'colaborators' ? (
-                <ColaboratorOptionsModal ID={ID} />
-            ) : (
-                <RoleOptionsModal ID={ID}/>
-            )}
+            {children}
         </OptionsModal>}
     </ActionButtonContainer>
   )
 }
 
-const ActionButtonContainer = styled.th`
+const ActionButtonContainer = styled.div`
     position: relative;
     text-align: right;
     :hover {

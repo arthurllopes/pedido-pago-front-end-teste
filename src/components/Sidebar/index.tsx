@@ -13,7 +13,7 @@ const SidebarContainer = styled.div`
     min-height: 100%;
     width: 256px;
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     display: none;
   }
 `
