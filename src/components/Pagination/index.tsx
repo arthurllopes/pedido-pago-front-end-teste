@@ -10,7 +10,7 @@ type Props = {
 
 const Pagination = ({current_page, last_page, total, per_page}: Props) => {
     const {tab} = useNavigation()
-    function nextPage() {
+    /*function nextPage() {
         if (current_page < lastPage) {
           setCurrentPage(prevState => prevState + 1)
         }
@@ -19,7 +19,7 @@ const Pagination = ({current_page, last_page, total, per_page}: Props) => {
         if (current_page > 1) {
           setCurrentPage(prevState => prevState - 1)
         }
-    }
+    }*/
   return (
     <div>
         <div>Mostrando {per_page} de {total} registros</div>
