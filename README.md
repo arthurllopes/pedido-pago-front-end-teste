@@ -2,6 +2,8 @@
 
 Obrigado pelo convite, espero que gostem!
 
+link do demo: https://pedido-pago-front-end-teste.vercel.app/
+
 ## 💻 Tecnologias
 
  - [React](https://pt-br.reactjs.org/)
